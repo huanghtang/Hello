@@ -1,0 +1,45 @@
+
+#开发环境
+dbType=mysql
+
+#本地数据库配置
+jdbcUrl = jdbc:mysql://127.0.0.1:3306/xinye?utoReconnect=true&useSSL=true&characterEncoding=utf8&serverTimezone=Asia/Shanghai
+user = root
+password = root
+
+#公司服务器
+#jdbcUrl = jdbc:mysql://112.74.63.130:3306/xinye?autoReconnect=true&useSSL=true&characterEncoding=utf8&serverTimezone=Asia/Shanghai
+#user = sandu
+#password = Sandu.520
+
+
+#开发模式
+devMode =true
+
+
+#24点定时布施
+#cron
+cron4j=task1
+## 秒 分 时
+##每天0点更新最新价格
+task1.cron=0 0 * * *
+task1.class=com.sandu.xinye.common.itask.EveryDayUpdateUser
+task1.enable=true
+
+#微信app授权登录
+
+
+#QQ授权登录(app)
+
+
+#七牛云存储
+
+##本地上传文件的地址
+
+
+##开发服务器的上传地址
+#uploadPath=
+#uploadIP=
+
+
+
